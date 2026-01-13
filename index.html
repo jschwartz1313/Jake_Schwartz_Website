@@ -56,7 +56,7 @@
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
             list-style: none;
         }
 
@@ -207,6 +207,146 @@
             line-height: 1.6;
         }
 
+        /* Experience Section */
+        .experience {
+            background: var(--white);
+        }
+
+        .experience-timeline {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .experience-item {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .experience-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .experience-title {
+            flex: 1;
+        }
+
+        .experience-title h3 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .experience-title h4 {
+            color: var(--accent-color);
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .experience-date {
+            color: #666;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .experience-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-item li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .experience-item li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Projects Section */
+        .projects {
+            background: var(--light-bg);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px var(--shadow);
+        }
+
+        .project-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .project-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .project-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .project-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .project-card li {
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .project-card li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
         /* Contact Section */
         .contact {
             background: var(--white);
@@ -280,11 +420,28 @@
             }
 
             .nav-links {
-                gap: 1rem;
+                gap: 0.75rem;
+                font-size: 0.9rem;
             }
 
             section {
                 padding: 3rem 1.5rem;
+            }
+
+            .experience-header {
+                flex-direction: column;
+            }
+
+            .experience-date {
+                align-self: flex-start;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .interests-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -296,6 +453,8 @@
             <div class="logo">Jake Schwartz</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#interests">Interests</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -341,6 +500,91 @@
                     <li>Data Visualization</li>
                     <li>GHG Accounting</li>
                     <li>Renewable Energy Siting</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <h2>Work Experience</h2>
+        <div class="experience-timeline">
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">
+                        <h3>Data Operations Intern</h3>
+                        <h4>Paces</h4>
+                    </div>
+                    <div class="experience-date">October 2025 - Present</div>
+                </div>
+                <ul>
+                    <li>Collect, manage, and organize large geospatial datasets from ArcGIS REST servers and live maps to support environmental and hazard mapping for state and federal use</li>
+                    <li>Perform data quality checks, documentation, and analyses to prepare findings for colleagues</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">
+                        <h3>Land Siting and Research Intern</h3>
+                        <h4>Sonder Energy</h4>
+                    </div>
+                    <div class="experience-date">November 2023 - August 2024</div>
+                </div>
+                <ul>
+                    <li>Supported site selection and due diligence for 10-200 MW utility-scale solar projects using GIS (ArcGIS, QGIS) and environmental screening criteria</li>
+                    <li>Researched and summarized local, state, and federal environmental and zoning regulations relevant to project feasibility</li>
+                    <li>Managed and documented land and regulatory data to support project development decisions</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">
+                        <h3>Electric Bike Research Intern</h3>
+                        <h4>Environmental Defense Fund</h4>
+                    </div>
+                    <div class="experience-date">June 2023 - August 2023</div>
+                </div>
+                <ul>
+                    <li>Compiled and presented a technical report on the potential for increased e-bike usage to reduce greenhouse gas emissions</li>
+                    <li>Attended weekly meetings with supervisors, interns, and members of the science team</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Exposomics Knowledge Graphs</h3>
+                <div class="project-meta">Information Science Capstone | September 2025 - Present</div>
+                <ul>
+                    <li>Working in a team of 6 to develop a knowledge graph on exposomics, paired with existing knowledge graphs</li>
+                    <li>Consulting with professors and professionals to gather insights on applications of knowledge graphs in the natural sciences</li>
+                    <li>Leveraging distributed systems and data integration techniques to connect environmental health data</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <h3>Small Modular Reactor for Hydrogen Production</h3>
+                <div class="project-meta">Environmental Science Capstone | January 2025 - May 2025</div>
+                <ul>
+                    <li>Developed a comprehensive 50-page report for a theoretical General Atomics EM² small modular reactor to power green hydrogen production</li>
+                    <li>Analyzed energy systems, material flows, and environmental impacts of nuclear-powered hydrogen generation</li>
+                    <li>Presented project findings to colleagues and faculty, demonstrating technical feasibility and sustainability benefits</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <h3>UNC Renewable Energy Special Projects</h3>
+                <div class="project-meta">Committee Member | September 2022 - Present</div>
+                <ul>
+                    <li>Contributing to renewable energy and energy-efficiency projects on campus including solar panel installations, energy savings dashboard, and electric groundskeeping equipment</li>
+                    <li>Meeting with colleagues and university officials to discuss stakeholder needs and budgeting</li>
+                    <li>Presenting final projects to peers and campus leadership</li>
                 </ul>
             </div>
         </div>
