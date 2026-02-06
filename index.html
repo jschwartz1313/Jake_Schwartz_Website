@@ -354,6 +354,79 @@
             font-weight: bold;
         }
 
+        /* Portfolio Section */
+        .portfolio {
+            background: var(--white);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .portfolio-card {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px var(--shadow);
+        }
+
+        .portfolio-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .portfolio-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .portfolio-card .portfolio-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .portfolio-card .portfolio-link:hover {
+            color: var(--primary-color);
+        }
+
+        .portfolio-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .portfolio-badge.github {
+            background: #24292e;
+            color: white;
+        }
+
+        .portfolio-badge.streamlit {
+            background: #ff4b4b;
+            color: white;
+        }
+
         /* Mission Statement Section */
         .mission {
             background: var(--white);
@@ -619,6 +692,7 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -833,6 +907,34 @@
                     <li>Collaborating with university officials on stakeholder needs and project budgeting</li>
                 </ul>
             </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+            <!-- GitHub Project Template -->
+            <div class="portfolio-card">
+                <span class="portfolio-badge github">GitHub</span>
+                <h3>Project Title</h3>
+                <p>Brief description of what this project does and the technologies used.</p>
+                <a href="https://github.com/jschwartz1313/repo-name" target="_blank" class="portfolio-link">
+                    View on GitHub →
+                </a>
+            </div>
+
+            <!-- Streamlit App Template -->
+            <div class="portfolio-card">
+                <span class="portfolio-badge streamlit">Streamlit</span>
+                <h3>App Title</h3>
+                <p>Brief description of this Streamlit application and its purpose.</p>
+                <a href="https://your-app.streamlit.app" target="_blank" class="portfolio-link">
+                    View Live App →
+                </a>
+            </div>
+
+            <!-- Add more portfolio items as needed -->
         </div>
     </section>
 
